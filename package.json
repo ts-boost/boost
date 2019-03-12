@@ -1,41 +1,21 @@
 {
-  "name": "@ts-boost/boost",
-  "description": "A statically-typed and functional library collection to assist development with TypeScript.",
-  "repository": "https://github.com/ts-boost/boost",
-  "version": "0.0.0",
-  "main": "index.js",
-  "author": "Frederik Krautwald <fkrautwald@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@briancavalier/assert": "^3.4.0",
-    "@typed/test": "^0.9.0",
-    "@types/node": "^7.0.22",
-    "glob-expand": "^0.2.1",
-    "husky": "^0.13.4",
-    "lerna": "^2.0.0-rc.5",
-    "lint-staged": "^3.6.0",
-    "prettier": "^1.4.2",
-    "ts-node": "^3.0.4",
-    "typescript": "^2.3.4"
-  },
-  "lint-staged": {
-    ".ts": [
-      "prettier --write --print-width 100 --tab-width 2 --no-semi --single-quote --trailing-comma es5 --parser typescript",
-      "git add"
-    ],
-    "*": [
-      "git add"
-    ]
-  },
-  "scripts": {
-    "precommit": "lint-staged",
-    "postinstall": "lerna exec npm install && lerna bootstrap --hoist",
-    "test": "npm run test:lint && npm run test:unit",
-    "test:unit": "lerna run test:unit",
-    "test:lint": "lerna exec -- ../../node_modules/.bin/prettier --write --print-width 100 --tab-width 2 --no-semi --single-quote --trailing-comma es5 --parser typescript src/*.ts src/**/*.ts src/**/**/*.ts",
-    "build": "node tools/build.js",
-    "release:canary": "lerna publish --canary",
-    "release:beta": "lerna publish --npm-tag beta",
-    "release": "lerna publish"
-  }
+    "name": "@ts-boost/boost",
+    "version": "0.0.0",
+    "private": true,
+    "description": "A statically-typed and library collection to assist development with TypeScript.",
+    "keywords": [],
+    "homepage": "https://github.com/ts-boost/boost",
+    "bugs": "https://github.com/ts-boost/boost/issues",
+    "repository": "https://github.com/ts-boost/boost",
+    "license": "TS-Boost Software License",
+    "author": "Frederik Krautwald <fkrautwald@gmail.com> (https://github.com/Frikki)",
+    "contributors": [],
+    "directories": {
+        "doc": "./docs"
+    },
+    "scripts": {
+        "test": "echo 'There are no tests to run.'"
+    },
+    "dependencies": {},
+    "devDependencies": {}
 }
