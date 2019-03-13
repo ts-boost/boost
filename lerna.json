@@ -6,6 +6,11 @@
     "command": {
         "publish": {
             "allowBranch": "master"
+        },
+        "create": {
+            "homepage": "https://github.com/ts-boost/boost",
+            "bugs": "https://github.com/ts-boost/boost/issues",
+            "license": "SEE LICENSE IN LICENSE"
         }
     }
 }
