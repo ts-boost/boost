@@ -2,10 +2,24 @@
 
 > A collection of core types and rules with minimal dependencies.
 
+## Get It
+
+```shell
+npm install --save @ts-boost/core
+
+yarn add @ts-boost/core
+```
+
 ## Usage
 
-```
-const core = require('@ts-boost/core');
+```typescript
+import { ALPHA } '@ts-boost/core'
 
-// TODO: DEMONSTRATE API
+// Ensure that value is A-Z / a-z.
+const value: ALPHA = 'X'   // success
+const value: ALPHA = 't'   // success
+const value: ALPHA = 'foo' // error
+const value: ALPHA = 42    // error
+const value: ALPHA = '42'  // error
+const value: ALPHA = null  // error
 ```
