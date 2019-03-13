@@ -22,7 +22,9 @@
     },
     "scripts": {
         "prepare": "tsc -p tsconfig.build.json",
-        "test": "typed-test 'src/*.test.ts' 'src/**/*.test.ts'"
+        "test": "yarn test:ts && yarn test:unit",
+        "test:unit": "typed-test 'src/**/*.__test__.ts'",
+        "test:ts": "tsc -p tsconfig.test.json --noEmit"
     },
     "publishConfig": {
         "access": "public"
