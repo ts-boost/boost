@@ -11,8 +11,12 @@
     "author": "Frederik Krautwald <fkrautwald@gmail.com> (https://github.com/Frikki)",
     "contributors": [],
     "directories": {
-        "doc": "./docs"
+        "doc": "./docs",
+        "packages": "./packages"
     },
+    "workspaces": [
+        "packages/*"
+    ],
     "scripts": {
         "test": "echo 'There are no tests to run.'"
     },
