@@ -18,7 +18,16 @@
         "packages/*"
     ],
     "scripts": {
-        "test": "echo 'There are no tests to run.'"
+        "bootstrap": "lerna bootstrap",
+        "build": "yarn clean && yarn prepare",
+        "bump": "lerna publish --exact --skip-npm",
+        "clean": "rimraf packages/**/lib",
+        "clean:dist": "lerna clean --yes && yarn clean",
+        "lint": "tslint -p tsconfig.json",
+        "lint:fix": "tslint -p tsconfig.json --fix",
+        "prepare": "lerna run prepare",
+        "release": "yarn bump && git push --follow-tags && scripts/release",
+        "test": "lerna run test"
     },
     "dependencies": {},
     "devDependencies": {
