@@ -20,7 +20,7 @@
     "scripts": {
         "bootstrap": "lerna bootstrap",
         "build": "yarn clean && yarn prepare",
-        "bump": "lerna publish --exact --skip-npm",
+        "bump": "lerna version --exact",
         "clean": "rimraf packages/**/lib",
         "clean:dist": "lerna clean --yes && yarn clean",
         "lint": "tslint -p tsconfig.json",
