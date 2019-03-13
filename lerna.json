@@ -1,7 +1,16 @@
 {
-  "lerna": "2.0.0-rc.5",
-  "packages": [
-    "packages/*"
-  ],
-  "version": "independent"
+    "lerna": "3.13.1",
+    "version": "independent",
+    "npmClient": "yarn",
+    "useWorkspaces": true,
+    "command": {
+        "publish": {
+            "allowBranch": "master"
+        },
+        "create": {
+            "homepage": "https://github.com/ts-boost/boost",
+            "bugs": "https://github.com/ts-boost/boost/issues",
+            "license": "SEE LICENSE IN LICENSE"
+        }
+    }
 }

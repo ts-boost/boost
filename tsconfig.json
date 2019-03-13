@@ -1,22 +1,10 @@
 {
-  "compilerOptions": {
-    "lib": [
-      "dom",
-      "es5",
-      "es2015"
-    ],
-    "target": "es5",
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "declaration": true,
-    "noImplicitAny": true,
-    "sourceMap": true,
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true
-  },
-  "include": [
-    "packages/*/src/**/*.ts",
-    "tools/*/src/**/*.ts"
-  ]
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "baseUrl": "./packages",
+        "paths": {
+            "@ts-boost/*": ["./*/src"]
+        }
+    },
+    "include": ["./types/*"]
 }
