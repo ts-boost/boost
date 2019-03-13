@@ -1,0 +1,30 @@
+{
+    "name": "@ts-boost/core",
+    "version": "0.0.0",
+    "description": "A collection of core types and rules with minimal dependencies.",
+    "keywords": ["TS-Boost", "TypeScript", "core", "minimal", "rules", "types"],
+    "homepage": "https://github.com/ts-boost/boost/tree/master/packages/core#readme",
+    "bugs": {
+        "url": "https://github.com/ts-boost/boost/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ts-boost/boost.git"
+    },
+    "license": "SEE LICENSE IN LICENSE",
+    "author": "Frederik Krautwald <fkrautwald@gmail.com> (https://github.com/Frikki)",
+    "files": ["lib"],
+    "main": "lib/index.js",
+    "module": "lib/index.m.js",
+    "types": "lib/index.d.ts",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "prepare": "tsc -p tsconfig.build.json",
+        "test": "typed-test 'src/*.test.ts' 'src/**/*.test.ts'"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
