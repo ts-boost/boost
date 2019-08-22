@@ -1,10 +1,10 @@
 {
     "extends": "./tsconfig.base.json",
     "compilerOptions": {
-        "baseUrl": "./packages",
+        "baseUrl": "./packages" /* Base directory to resolve non-relative module names. */,
         "paths": {
             "@ts-boost/*": ["./*/src"]
-        }
+        } /*Specify path mapping to be computed relative to baseUrl option. */
     },
     "include": ["./types/*"]
 }

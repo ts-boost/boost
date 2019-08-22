@@ -1,0 +1,19 @@
+{
+    "name": "@ts-boost/utilities",
+    "version": "0.0.0",
+    "private": false,
+    "description": "A collection of utility functions to assist development with TypeScript.",
+    "keywords": ["TypeScript", "utilities", "functions"],
+    "homepage": "https://github.com/ts-boost/boost",
+    "bugs": "https://github.com/ts-boost/boost/issues",
+    "repository": "https://github.com/ts-boost/boost",
+    "license": "MIT",
+    "author": "Frederik Krautwald <fkrautwald@gmail.com> (https://github.com/Frikki)",
+    "contributors": [],
+    "scripts": {
+        "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts}'",
+        "lint:fix": "tsc --noEmit && eslint 'src/**/*.{js,ts}' --fix",
+        "prepare": "tsc",
+        "test": "typed-test 'src/**/*.__test__.ts'"
+    }
+}

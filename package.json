@@ -7,39 +7,39 @@
     "homepage": "https://github.com/ts-boost/boost",
     "bugs": "https://github.com/ts-boost/boost/issues",
     "repository": "https://github.com/ts-boost/boost",
-    "license": "SEE LICENSE IN LICENSE",
+    "license": "MIT",
     "author": "Frederik Krautwald <fkrautwald@gmail.com> (https://github.com/Frikki)",
     "contributors": [],
     "directories": {
         "doc": "./docs",
         "packages": "./packages"
     },
-    "workspaces": [
-        "packages/*"
-    ],
+    "workspaces": ["packages/*"],
     "scripts": {
         "bootstrap": "lerna bootstrap",
         "build": "yarn clean && yarn prepare",
         "bump": "lerna version --exact",
         "clean": "rimraf packages/**/lib",
         "clean:dist": "lerna clean --yes && yarn clean",
-        "lint": "tslint -p tsconfig.json",
-        "lint:fix": "tslint -p tsconfig.json --fix",
+        "lint": "lerna run lint",
+        "lint:fix": "lerna run lint:fix",
         "prepare": "lerna run prepare",
         "release": "yarn bump && git push --follow-tags && scripts/release",
         "test": "lerna run test"
     },
     "dependencies": {},
     "devDependencies": {
-        "@typed/test": "^9.0.0",
-        "husky": "^1.3.1",
-        "lerna": "^3.13.1",
-        "lint-staged": "^8.1.5",
-        "prettier": "^1.16.4",
-        "tslint": "^5.13.1",
-        "tslint-config-prettier": "^1.18.0",
-        "tslint-plugin-prettier": "^2.0.1",
-        "typescript": "^3.3.3333"
+        "@typed/test": "9.3.0",
+        "@typescript-eslint/eslint-plugin": "2.0.0",
+        "@typescript-eslint/parser": "2.0.0",
+        "eslint": "6.2.1",
+        "eslint-config-prettier": "^6.1.0",
+        "eslint-plugin-prettier": "^3.1.0",
+        "husky": "3.0.4",
+        "lerna": "3.16.4",
+        "lint-staged": "9.2.3",
+        "prettier": "1.18.2",
+        "typescript": "3.5.3"
     },
     "husky": {
         "hooks": {
@@ -47,12 +47,7 @@
         }
     },
     "lint-staged": {
-        "*.{ts}": [
-            "yarn lint:fix",
-            "git add"
-        ],
-      "*": [
-          "git add"
-      ]
+        "*.{ts}": ["yarn lint:fix", "git add"],
+        "*": ["git add"]
     }
 }
