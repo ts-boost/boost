@@ -4,5 +4,6 @@
         "declarationDir": "lib" /* Specify output directory for generated declaration files. */,
         "outDir": "lib" /* Redirect output structure to the directory. */
     },
+    "exclude": ["src/**/*.__test__.ts"],
     "include": ["src/**/*.ts"]
 }
