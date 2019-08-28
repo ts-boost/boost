@@ -1,5 +1,5 @@
 {
-    "name": "@ts-boost/boost",
+    "name": "@tsboost/boost",
     "version": "0.0.0",
     "private": true,
     "description": "A statically-typed and library collection to assist development with TypeScript.",
