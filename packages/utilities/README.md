@@ -1,13 +1,13 @@
-# `@ts-boost/utilities`
+# `@tsboost/utilities`
 
 > A collection of utility functions to assist development with TypeScript.
 
 ## Get It
 
 ```shell
-npm install --save @ts-boost/core
+npm install --save @tsboost/utilities
 
-yarn add @ts-boost/core
+yarn add @tsboost/utilities
 ```
 
 ## Usage
