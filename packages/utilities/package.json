@@ -1,6 +1,6 @@
 {
     "name": "@tsboost/utilities",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "private": false,
     "description": "A collection of utility functions to assist development with TypeScript.",
     "keywords": [
