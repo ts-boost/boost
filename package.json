@@ -24,7 +24,7 @@
         "lint": "lerna run lint",
         "lint:fix": "lerna run lint:fix",
         "prepare": "lerna run prepare",
-        "release": "yarn bump && git push --follow-tags && scripts/release",
+        "release": "yarn bump && git push --follow-tags && lerna publish",
         "test": "lerna run test"
     },
     "dependencies": {},
