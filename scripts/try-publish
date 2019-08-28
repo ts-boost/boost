@@ -3,7 +3,7 @@ set -e
 # pwd
 package=$(jq -r .name package.json)
 version=$(jq -r .version package.json)
-published=$(yarn info $package version) || published="N/A"
+published=$(npm info $package version) || published="N/A"
 if [[ "$version" = "$published" ]]; then
   echo "⚠️  $package@$version is already published!"
 else
