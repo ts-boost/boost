@@ -1,12 +1,12 @@
 {
     "name": "@tsboost/utilities",
-    "version": "0.1.0",
+    "version": "0.0.0",
     "private": false,
     "description": "A collection of utility functions to assist development with TypeScript.",
     "keywords": [
         "TypeScript",
-        "utilities",
-        "functions"
+        "functions",
+        "utilities"
     ],
     "homepage": "https://github.com/ts-boost/boost",
     "bugs": "https://github.com/ts-boost/boost/issues",
@@ -19,5 +19,8 @@
         "lint:fix": "tsc --noEmit && eslint 'src/**/*.{js,ts}' --fix",
         "prepare": "tsc",
         "test": "typed-test 'src/**/*.__test__.ts'"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
