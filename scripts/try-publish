@@ -8,5 +8,5 @@ if [[ "$version" = "$published" ]]; then
   echo "⚠️  $package@$version is already published!"
 else
   echo "📦  Publishing: $package@$version (published: $published)"
-  yarn publish --non-interactive --new-version $version
+  npm publish --access=public --non-interactive --new-version $version
 fi
