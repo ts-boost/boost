@@ -20,6 +20,11 @@
         "prepare": "tsc -p tsconfig.build.json",
         "test": "typed-test 'src/**/*.__test__.ts'"
     },
+    "devDependencies": {
+        "fp-ts": "^2.4.3",
+        "io-ts": "^2.0.6",
+        "monocle-ts": "^2.0.1"
+    },
     "peerDependencies": {
         "fp-ts": "^2.4.2",
         "io-ts": "^2.0.6",
