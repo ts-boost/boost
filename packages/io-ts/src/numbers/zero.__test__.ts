@@ -30,7 +30,6 @@ export const zeroTestSuite: test.Test = test.describe('Zero', [
                 'Invalid value undefined supplied to : Zero',
             ])
             assertionUtilities.failure(Sut.Zero, null, ['Invalid value null supplied to : Zero'])
-            assertionUtilities.failure(Sut.Zero, null, ['Invalid value null supplied to : Zero'])
             assertionUtilities.failure(Sut.Zero, '', ['Invalid value "" supplied to : Zero'])
             assertionUtilities.failure(Sut.Zero, '3.14', [
                 'Invalid value "3.14" supplied to : Zero',
