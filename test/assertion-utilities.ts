@@ -13,7 +13,7 @@ import * as t from 'io-ts'
 import { PathReporter } from 'io-ts/lib/PathReporter'
 
 export function success<T>(result: t.Validation<T>, expected?: T): void {
-    if (either.isRight(result) && Boolean(expected)) {
+    if (either.isRight(result) && expected !== undefined) {
         assert.deepStrictEqual(result.right, expected)
     } else if (either.isLeft(result)) {
         throw new Error(`${result} is not a right.`)
