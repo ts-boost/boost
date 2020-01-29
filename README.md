@@ -1,4 +1,4 @@
-# Boost!
+# @tsboost/boost
 
 Copyright © 2017 Frederik Krautwald
 
