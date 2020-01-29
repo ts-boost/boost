@@ -23,6 +23,7 @@
         "clean:dist": "lerna clean --yes && yarn clean",
         "lint": "lerna run lint",
         "lint:fix": "lerna run lint:fix",
+        "postinstall": "lerna bootstrap",
         "prepare": "lerna run prepare",
         "release": "yarn bump && git push --follow-tags && lerna publish from-git",
         "test": "lerna run test"
@@ -33,11 +34,11 @@
         "@typescript-eslint/eslint-plugin": "^2.17.0",
         "@typescript-eslint/parser": "^2.17.0",
         "eslint": "^6.8.0",
-        "eslint-config-prettier": "^6.1.0",
+        "eslint-config-prettier": "^6.10.0",
         "eslint-plugin-prettier": "^3.1.0",
         "husky": "^4.2.1",
         "lerna": "^3.20.2",
-        "lint-staged": "^10.0.3",
+        "lint-staged": "^10.0.4",
         "prettier": "^1.19.1",
         "typescript": "^3.7.5"
     },
