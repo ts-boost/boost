@@ -6,7 +6,7 @@
 import * as assert from 'assert'
 
 // ### fp-ts
-import * as either from 'fp-ts/lib/either'
+import * as either from 'fp-ts/lib/Either'
 
 // ### io-ts
 import * as t from 'io-ts'
