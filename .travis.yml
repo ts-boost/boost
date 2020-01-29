@@ -3,3 +3,6 @@ node-js:
     - "12"
 cache:
     yarn: true
+branches:
+    only:
+        - master
