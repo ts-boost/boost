@@ -11,7 +11,7 @@ import * as assertionUtilities from '../../../../test/assertion-utilities'
 // ### System under test
 import * as Sut from './nonzero'
 
-export const zeroTestSuite: test.Test = test.describe('Nonzero', [
+export const nonzeroTestSuite: test.Test = test.describe('Nonzero', [
     test.describe('is', [
         test.it('checks an isomorphic value', (assert: test.Assertions) => {
             assert.equal(Sut.Nonzero.is(0), false)
@@ -21,8 +21,8 @@ export const zeroTestSuite: test.Test = test.describe('Nonzero', [
     ]),
     test.describe('decode', [
         test.it('succeeds validating a valid value', (assert: test.Assertions) => {
-            assertionUtilities.success(Sut.Nonzero.decode(3.14), 0 as Sut.Nonzero)
-            assertionUtilities.success(Sut.Nonzero.decode(-6.283), 0 as Sut.Nonzero)
+            assertionUtilities.success(Sut.Nonzero.decode(3.14), 3.14 as Sut.Nonzero)
+            assertionUtilities.success(Sut.Nonzero.decode(-6.283), -6.283 as Sut.Nonzero)
             // Hack to prevent `No Assertions used` error.
             assert.ok(true)
         }),

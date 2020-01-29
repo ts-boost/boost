@@ -5,7 +5,7 @@
 // ### io-ts
 import * as t from 'io-ts'
 
-// ### Numbers
+// ### numbers
 import { Positive } from './positive'
 import { Negative } from './negative'
 
