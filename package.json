@@ -25,7 +25,7 @@
         "lint:fix": "lerna run lint:fix",
         "postinstall": "lerna bootstrap",
         "prepare": "lerna run prepare",
-        "release": "yarn bump && git push --follow-tags && lerna publish from-git",
+        "release": "yarn bump && git push --follow-tags && lerna publish --yes from-git",
         "test": "lerna run test"
     },
     "dependencies": {},
