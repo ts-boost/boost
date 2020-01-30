@@ -14,7 +14,9 @@ branches:
         - master
 
 after_success:
-    - git remote set-url origin git@{GH_TOKEN}@github.com:${TRAVIS_REPO_SLUG}.git
+    - git remote set-url origin https://${GH_TOKEN}@github.com:${TRAVIS_REPO_SLUG}.git
+    - git checkout master
+    - git pull origin master
 
 git:
     depth: 5
@@ -24,7 +26,7 @@ deploy:
     email: $EMAIL_ADDRESS
     api_key: $NPM_AUTH_TOKEN
     skip_cleanup: true
+    keep_history: true
     script: "ynpx lerna version --exact && git push --follow-tags && npx lerna publish --yes from-git"
     on:
-        tags: true
         branch: master
