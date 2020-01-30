@@ -24,8 +24,8 @@ deploy:
     provider: script
     email: $EMAIL_ADDRESS
     api_key: $NPM_AUTH_TOKEN
-    skip_cleanup: true
     github_token: $GH_TOKEN
+    skip_cleanup: true
     keep_history: true
     script: "yarn release"
     on:
