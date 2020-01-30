@@ -10,11 +10,18 @@ module.exports = {
     useTabs: false,
     overrides: [
         {
-            files: ['.babelrc', '.editorconfig', '.prettierrc', '*.json'],
+            files: ['.babelrc', '.editorconfig', '.prettierrc', '*.json', "*.yml"],
             options: {
                 parser: 'json',
                 singleQuote: false,
                 trailingComma: 'es5',
+            },
+        },
+        {
+            files: ['*.yml'],
+            options: {
+                parser: 'yaml',
+                singleQuote: false,
             },
         },
     ],
