@@ -74,7 +74,7 @@ export const nonnegativeTestSuite: test.Test = test.describe('Nonnegative', [
     test.describe('encode', [
         test.it('encodes an isomorphic value', (assert: test.Assertions) => {
             assert.equal(Sut.Nonnegative.encode(3.14 as Sut.Nonnegative), 3.14)
-            assert.equal(Sut.Nonnegative.encode(-0.6801 as Sut.Nonnegative), -0.6801)
+            assert.equal(Sut.Nonnegative.encode(0 as Sut.Nonnegative), 0)
         }),
     ]),
 ])
