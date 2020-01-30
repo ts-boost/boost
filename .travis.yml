@@ -13,7 +13,7 @@ branches:
         - master
 
 after_success:
-    - git remote set-url origin https://${GH_TOKEN}@github.com:${TRAVIS_REPO_SLUG}.git
+    - git remote set-url origin https://Frikki:${GH_TOKEN}@github.com:${TRAVIS_REPO_SLUG}.git
     - git checkout master
     - git pull origin master
 
@@ -25,6 +25,7 @@ deploy:
     email: $EMAIL_ADDRESS
     api_key: $NPM_AUTH_TOKEN
     skip_cleanup: true
+    github_token: $GH_TOKEN
     keep_history: true
     script: "yarn release"
     on:
