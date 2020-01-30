@@ -8,9 +8,6 @@ node_js:
 cache:
     yarn: true
 
-install:
-    - yarn global add ynpx
-
 branches:
     only:
         - master
@@ -29,6 +26,6 @@ deploy:
     api_key: $NPM_AUTH_TOKEN
     skip_cleanup: true
     keep_history: true
-    script: "ynpx lerna version --exact && git push --follow-tags && npx lerna publish --yes from-git"
+    script: "yarn release"
     on:
         branch: master
