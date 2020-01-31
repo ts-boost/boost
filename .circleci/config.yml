@@ -17,19 +17,22 @@ executors:
         environment:
             BASH_ENV: ~/.nvm/nvm.sh
 
+shared: &shared
+    steps:
+        # Install Node Version Manager.
+        - run:
+              name: Install Node Version Manager
+              command: |
+                  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+
 jobs:
     # Test on LTS
     Test-LTS:
+        <<: *shared
         executor: production
 
         # Perform these steps.
         steps:
-            # Install Node Version Manager.
-            - run:
-                  name: Install Node Version Manager
-                  command: |
-                      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
-
             # Check NVM version.
             - run:
                   name: Check Current NVM Version
