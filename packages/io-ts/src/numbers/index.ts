@@ -2,6 +2,8 @@
 
 export * from './integer'
 
+export * from './negative-integer'
+
 export * from './negative'
 
 export * from './nonnegative'
