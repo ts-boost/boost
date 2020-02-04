@@ -6,6 +6,8 @@ export * from './negative-integer'
 
 export * from './negative'
 
+export * from './nonnegative-integer'
+
 export * from './nonnegative'
 
 export * from './nonpositive'
