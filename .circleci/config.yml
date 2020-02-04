@@ -17,6 +17,9 @@ executors:
         environment:
             BASH_ENV: ~/.nvm/nvm.sh
 
+commands:
+    install-nvm:
+        description: "Install NVM"
         steps:
             # Install Node Version Manager.
             - run:
@@ -24,13 +27,11 @@ executors:
                   command: |
                       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 
-shared: &shared
-    steps:
-        # Install Node Version Manager.
-        - run:
-              name: Install Node Version Manager
-              command: |
-                  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+            # Check NVM version.
+            - run:
+                  name: Check Current NVM Version
+                  command: |
+                      nvm --version
 
 jobs:
     # Test on LTS
@@ -39,13 +40,9 @@ jobs:
 
         # Perform these steps.
         steps:
-            # Check NVM version.
-            - run:
-                  name: Check Current NVM Version
-                  command: |
-                      nvm --version
+            - install-nvm
 
-            # Install latest node version.
+            # Install LTS Node version.
             - run:
                   name: Install LTS Node Version
                   command: |
@@ -87,19 +84,9 @@ jobs:
 
         # Perform these steps.
         steps:
-            # Install Node Version Manager.
-            - run:
-                  name: Install Node Version Manager
-                  command: |
-                      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+            - install-nvm
 
-            # Check NVM version.
-            - run:
-                  name: Check Current NVM Version
-                  command: |
-                      nvm --version
-
-            # Install latest node version.
+            # Install latest Node version.
             - run:
                   name: Install Latest Node Version
                   command: |
