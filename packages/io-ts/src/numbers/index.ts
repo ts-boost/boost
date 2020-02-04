@@ -14,6 +14,8 @@ export * from './nonpositive'
 
 export * from './nonzero'
 
+export * from './positive-integer'
+
 export * from './positive'
 
 export * from './zero'
