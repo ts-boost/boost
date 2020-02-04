@@ -1,4 +1,4 @@
-// # Negative Integer
+// # Nonnegative Integer
 
 // ## Dependencies
 
