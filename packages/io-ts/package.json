@@ -3,22 +3,14 @@
     "version": "0.2.0",
     "private": false,
     "description": "A collection of codecs and combinators for use with io-ts.",
-    "keywords": [
-        "TypeScript",
-        "types",
-        "validation"
-    ],
+    "keywords": ["TypeScript", "types", "validation"],
     "homepage": "https://github.com/ts-boost/boost",
     "bugs": "https://github.com/ts-boost/boost/issues",
     "repository": "https://github.com/ts-boost/boost",
     "license": "MIT",
     "author": "Frederik Krautwald <fkrautwald@gmail.com> (https://github.com/Frikki)",
     "contributors": [],
-    "files": [
-        "lib"
-    ],
-    "main": "lib/index",
-    "types": "lib/index",
+    "files": ["lib"],
     "scripts": {
         "clean": "rm -rf ./lib",
         "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts}'",
