@@ -11,7 +11,7 @@ import * as assertionUtilities from '../../../../test/assertion-utilities'
 // ### System under test
 import * as Sut from './date-year-string'
 
-export const isoDateTestSuite: test.Test = test.describe('DateYearString', [
+export const dateYearStringTestSuite: test.Test = test.describe('DateYearString', [
     test.describe('is', [
         test.it('checks an isomorphic value', (assert: test.Assertions) => {
             assert.equal(Sut.DateYearString.is('20200'), false)
