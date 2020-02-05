@@ -11,10 +11,24 @@ export interface ZeroBrand {
 }
 
 /**
- * @example
- * import { Zero } from '@tsboost/io-ts/numbers/zero'
+ * Decode, encode and validate a zero.
  *
- * Zero.decode(0) // Either.right(0)
+ * @example
+ * import { Zero } from '@tsboost/io-ts/numbers'
+ * import { right } from 'fp-ts/lib/Either'
+ * import { PathReporter } from 'io-ts/lib/PathReporter'
+ *
+ * assert.deepStrictEqual(Zero.decode(0), right(0))
+ * assert.deepStrictEqual(PathReporter.report(
+ *     Zero.decode(-9.5)),
+ *     ['Invalid value -9.5 supplied to : Zero']
+ * )
+ * assert.deepStrictEqual(PathReporter.report(
+ *     Zero.decode(3.14)),
+ *     ['Invalid value3.14 supplied to : Zero']
+ * )
+ *
+ * @since 0.2.0
  */
 export const Zero = t.brand(t.number, (x: number): x is t.Branded<number, ZeroBrand> => !x, 'Zero')
 
