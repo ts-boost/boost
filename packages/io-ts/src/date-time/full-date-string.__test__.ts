@@ -15,7 +15,7 @@ export const fullDateStringTestSuite: test.Test = test.describe('FullDateString'
     test.describe('is', [
         test.it('checks an isomorphic value', (assert: test.Assertions) => {
             assert.equal(Sut.FullDateString.is('2020-02-40'), false)
-            assert.equal(Sut.FullDateString.is('19730130'), true)
+            assert.equal(Sut.FullDateString.is('19730130'), false)
             assert.equal(Sut.FullDateString.is('1973-01-30'), true)
         }),
     ]),

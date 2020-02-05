@@ -29,7 +29,7 @@ export interface FullDateStringBrand {
 export const FullDateString = t.brand(
     t.string,
     (s: string): s is t.Branded<string, FullDateStringBrand> =>
-        /^([0-9]{4})-?(1[0-2]|0[1-9])-?(3[01]|0[1-9]|[12][0-9])$/gi.test(s),
+        /^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])$/gi.test(s),
     'FullDateString',
 )
 
